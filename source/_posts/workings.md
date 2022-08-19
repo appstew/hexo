@@ -4,6 +4,26 @@ title: mermaid and math workings test...
 description: >
 hide_description: false
 ---
+
+## 0
+
+```mermaid
+graph TD;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;
+click D href "https://google.com"
+```
+<div class="mermaid">
+graph TD;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;
+click D href "https://google.com"
+</div>
+
 ## 1
 
 - [x] rendered on VS code preview or not
