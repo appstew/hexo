@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+    <meta name="description" content="0graph TD;     A--&gt;B;     A--&gt;C;     B--&gt;D;     C--&gt;D; click D href &quot;https:&#x2F;&#x2F;google.com&quot;  graph TD;     A--&gt;B;     A--&gt;C;     B--&gt;D;     C--&gt;D; click D href &quot;https:&#x2F;&#x2F;google.com&quot;   1  rendered on VS co">
+<meta property="og:type" content="article">
+<meta property="og:title" content="mermaid and math workings test...">
+<meta property="og:url" content="http://example.com/2022/08/19/workings/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="0graph TD;     A--&gt;B;     A--&gt;C;     B--&gt;D;     C--&gt;D; click D href &quot;https:&#x2F;&#x2F;google.com&quot;  graph TD;     A--&gt;B;     A--&gt;C;     B--&gt;D;     C--&gt;D; click D href &quot;https:&#x2F;&#x2F;google.com&quot;   1  rendered on VS co">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://jekyllrb.com/img/octojekyll.png">
+<meta property="og:image" content="https://mermaid.ink/img/pako:eNplj7EOwjAMRH_F8twFIZasFDF1Yu1iNRY10BiljqoK8e-klEoFMiXvznfOAxv1jA4BLppi4LEOkI-J3RiqEQaNVwln8PRRem5MNMBRwfQtzxygoiuDMTnYOah4wdmY7r2RxN7Bdq2U87yDzUQL2JP9dbTarZO8DmHJ-mo5ib3FnwossOPYkfj8x8dEa7SWcya6fPWU18c6PLMv3T0ZH7yYRnQWExdIyfQ0hmZ5z55S6Bypm-HzBR-_ZCw">
+<meta property="og:image" content="http://example.com/2022/08/19/workings/mermaid1.svg">
+<meta property="article:published_time" content="2022-08-19T05:20:05.739Z">
+<meta property="article:modified_time" content="2022-08-19T05:40:28.500Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://jekyllrb.com/img/octojekyll.png">
+    
+    
+      
+        
+          <link rel="shortcut icon" href="/images/favicon.ico">
+        
+      
+      
+        
+          <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+        
+      
+      
+        
+          <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+        
+      
+    
+    <!-- title -->
+    <title>mermaid and math workings test...</title>
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!-- persian styles -->
+    
+    <!-- rss -->
+    
+    
+	<!-- mathjax -->
+	
+<meta name="generator" content="Hexo 6.2.0"></head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#" aria-label="Menu"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#" aria-label="Menu"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" aria-label="Top" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+        <!--
+       --><li><a href="/">Home</a></li><!--
+     --><!--
+       --><li><a href="/about/">About</a></li><!--
+     --><!--
+       --><li><a href="/archives/">Writing</a></li><!--
+     --><!--
+       --><li><a target="_blank" rel="noopener" href="http://github.com/probberechts">Projects</a></li><!--
+     -->
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        
+        <li><a class="icon" aria-label="Next post" href="/2022/08/19/hello-world-1/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" aria-label="Back to top" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="Share post" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=http://example.com/2022/08/19/workings/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=http://example.com/2022/08/19/workings/&text=mermaid and math workings test..."><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=http://example.com/2022/08/19/workings/&title=mermaid and math workings test..."><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=http://example.com/2022/08/19/workings/&is_video=false&description=mermaid and math workings test..."><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=mermaid and math workings test...&body=Check out this article: http://example.com/2022/08/19/workings/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=http://example.com/2022/08/19/workings/&title=mermaid and math workings test..."><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=http://example.com/2022/08/19/workings/&title=mermaid and math workings test..."><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=http://example.com/2022/08/19/workings/&title=mermaid and math workings test..."><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=http://example.com/2022/08/19/workings/&title=mermaid and math workings test..."><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=http://example.com/2022/08/19/workings/&name=mermaid and math workings test...&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=http://example.com/2022/08/19/workings/&t=mermaid and math workings test..."><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#0"><span class="toc-number">1.</span> <span class="toc-text">0</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1"><span class="toc-number">2.</span> <span class="toc-text">1</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2"><span class="toc-number">3.</span> <span class="toc-text">2</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3"><span class="toc-number">4.</span> <span class="toc-text">3</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4"><span class="toc-number">5.</span> <span class="toc-text">4</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5"><span class="toc-number">6.</span> <span class="toc-text">5</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6"><span class="toc-number">7.</span> <span class="toc-text">6</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-IAL"><span class="toc-number">8.</span> <span class="toc-text">7 IAL</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8"><span class="toc-number">9.</span> <span class="toc-text">8</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9"><span class="toc-number">10.</span> <span class="toc-text">9</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#10"><span class="toc-number">11.</span> <span class="toc-text">10</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#11"><span class="toc-number">12.</span> <span class="toc-text">11</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#12"><span class="toc-number">13.</span> <span class="toc-text">12</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#13"><span class="toc-number">14.</span> <span class="toc-text">13</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#14"><span class="toc-number">15.</span> <span class="toc-text">14</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#15"><span class="toc-number">16.</span> <span class="toc-text">15</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#16"><span class="toc-number">17.</span> <span class="toc-text">16</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#17"><span class="toc-number">18.</span> <span class="toc-text">17</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#18"><span class="toc-number">19.</span> <span class="toc-text">18</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#19"><span class="toc-number">20.</span> <span class="toc-text">19</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#20"><span class="toc-number">21.</span> <span class="toc-text">20</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#21"><span class="toc-number">22.</span> <span class="toc-text">21</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#22"><span class="toc-number">23.</span> <span class="toc-text">22</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  
+
+  <div class="content" itemprop="articleBody">
+      
+          <h2 id="0"><a href="#0" class="headerlink" title="0"></a>0</h2><pre class="mermaid">graph TD;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;
+click D href "https://google.com"</pre>
+<div class="mermaid">
+graph TD;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;
+click D href "https://google.com"
+</div>
+
+<h2 id="1"><a href="#1" class="headerlink" title="1"></a>1</h2><ul>
+<li><input checked="" disabled="" type="checkbox"> rendered on VS code preview or not</li>
+<li><input disabled="" type="checkbox"> renderd on built site or not</li>
+</ul>
+<p>|–|–|–|–|–|–|–|–|<br>|♜| |♝|♛|♚|♝|♞|♜|<br>| |♟|♟|♟| |♟|♟|♟|<br>|♟| |♞| | | | | |<br>| |♗| | |♟| | | |<br>| | | | |♙| | | |<br>| | | | | |♘| | |<br>|♙|♙|♙|♙| |♙|♙|♙|<br>|♖|♘|♗|♕|♔| | |♖|</p>
+<h2 id="2"><a href="#2" class="headerlink" title="2"></a>2</h2><ul>
+<li><input checked="" disabled="" type="checkbox"> rendered on VS code preview or not</li>
+<li><input disabled="" type="checkbox"> renderd on built site or not</li>
+</ul>
+<div class="markdown">
+|--|--|--|--|--|--|--|--|
+|♜| |♝|♛|♚|♝|♞|♜|
+| |♟|♟|♟| |♟|♟|♟|
+|♟| |♞| | | | | |
+| |♗| | |♟| | | |
+| | | | |♙| | | |
+| | | | | |♘| | |
+|♙|♙|♙|♙| |♙|♙|♙|
+|♖|♘|♗|♕|♔| | |♖|
+</div>  
+
+
+<h2 id="3"><a href="#3" class="headerlink" title="3"></a>3</h2><ul>
+<li><input checked="" disabled="" type="checkbox"> rendered on VS code preview or not</li>
+<li><input disabled="" type="checkbox"> renderd on built site or not</li>
+</ul>
+<div class="mermaid">
+gantt;
+[Prototype design] lasts 15 days
+[Test prototype] lasts 10 days
+-- All example --
+[Task 1 (1 day)] lasts 1 day
+[T2 (5 days)] lasts 5 days
+[T3 (1 week)] lasts 1 week
+[T4 (1 week and 4 days)] lasts 1 week and 4 days
+[T5 (2 weeks)] lasts 2 weeks
+</div>
+
+<h2 id="4"><a href="#4" class="headerlink" title="4"></a>4</h2><ul>
+<li><input checked="" disabled="" type="checkbox"> rendered on VS code preview or not</li>
+<li><input disabled="" type="checkbox"> renderd on built site or not</li>
+</ul>
+<p>[Prototype design] lasts 15 days<br>[Test prototype] lasts 10 days<br>– All example –<br>[Task 1 (1 day)] lasts 1 day<br>[T2 (5 days)] lasts 5 days<br>[T3 (1 week)] lasts 1 week<br>[T4 (1 week and 4 days)] lasts 1 week and 4 days<br>[T5 (2 weeks)] lasts 2 weeks</p>
+<h2 id="5"><a href="#5" class="headerlink" title="5"></a>5</h2><ul>
+<li><input checked="" disabled="" type="checkbox"> rendered on VS code preview or not</li>
+<li><input disabled="" type="checkbox"> renderd on built site or not</li>
+</ul>
+<div class="mermaid">
+graph TD;
+A[Client] --> B[Load Balancer] 
+B --> C[Server01] 
+B --> D[Server02]
+</div>
+
+<p>@startmermaid<br>graph TD;<br>A[Client] –&gt; B[Load Balancer]<br>B –&gt; C[Server01]<br>B –&gt; D[Server02]<br>@endmermaid</p>
+<h2 id="6"><a href="#6" class="headerlink" title="6"></a>6</h2><ul>
+<li><input checked="" disabled="" type="checkbox"> rendered on VS code preview or not</li>
+<li><input disabled="" type="checkbox"> renderd on built site or not</li>
+</ul>
+<div class="mermaid">
+graph TD;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;
+</div>
+
+
+
+<h2 id="7-IAL"><a href="#7-IAL" class="headerlink" title="7 IAL"></a>7 IAL</h2><ul>
+<li>[o] rendered on VS code preview or not</li>
+<li><input disabled="" type="checkbox"> renderd on built site or not</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>:             Here’s an Inline Attribute Lists example                :</th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>:       :</td>
+<td>:  <div style="color: red;"> &lt; Normal HTML Block &gt; </div> :</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>^^</td>
+<td>Red    {: .cls style&#x3D;”background: orange” }</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>^^ IALs</td>
+<td>Green  {: #id style&#x3D;”background: green; color: white” }</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>^^</td>
+<td>Blue   {: style&#x3D;”background: blue; color: white” }</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>^^</td>
+<td>Black  {: color-style text-style }</td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id="8"><a href="#8" class="headerlink" title="8"></a>8</h2><ul>
+<li>[o] rendered on VS code preview or not</li>
+<li><input disabled="" type="checkbox"> renderd on built site or not</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="left">:        Fruits || Food       :</th>
+<th align="left"></th>
+<th align="left"></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Apple</td>
+<td align="left">: Apple :</td>
+<td align="left">Apple      \</td>
+</tr>
+<tr>
+<td align="left">Banana</td>
+<td align="left">Banana</td>
+<td align="left">Banana     \</td>
+</tr>
+<tr>
+<td align="left">Orange</td>
+<td align="left">Orange</td>
+<td align="left">Orange</td>
+</tr>
+<tr>
+<td align="left">:   Rowspan is 4    :</td>
+<td align="left"></td>
+<td align="left">How’s it?</td>
+</tr>
+<tr>
+<td align="left">^^    A. Peach</td>
+<td align="left"></td>
+<td align="left">1. Fine :</td>
+</tr>
+<tr>
+<td align="left">^^    B. Orange</td>
+<td align="left"></td>
+<td align="left">^^ 2. Bad</td>
+</tr>
+<tr>
+<td align="left">^^    C. Banana</td>
+<td align="left"></td>
+<td align="left">It’s OK!</td>
+</tr>
+</tbody></table>
+<h2 id="9"><a href="#9" class="headerlink" title="9"></a>9</h2><ul>
+<li>[o] rendered on VS code preview or not</li>
+<li><input disabled="" type="checkbox"> renderd on built site or not</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="left">:                    MathJax || Image                 :</th>
+<th align="left"></th>
+<th align="left"></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Apple</td>
+<td align="left">: Apple :</td>
+<td align="left">Apple                          \</td>
+</tr>
+<tr>
+<td align="left">Banana</td>
+<td align="left">Banana</td>
+<td align="left">Banana                         \</td>
+</tr>
+<tr>
+<td align="left">Orange</td>
+<td align="left">Orange</td>
+<td align="left">Orange</td>
+</tr>
+<tr>
+<td align="left">:     Rowspan is 4     :</td>
+<td align="left"></td>
+<td align="left">:        How’s it?           :</td>
+</tr>
+<tr>
+<td align="left">^^     A. Peach</td>
+<td align="left"></td>
+<td align="left">1. <img src="https://jekyllrb.com/img/octojekyll.png" alt="example" title="An exemplary image"></td>
+</tr>
+<tr>
+<td align="left">^^     B. Orange</td>
+<td align="left"></td>
+<td align="left">^^ 2. $I &#x3D; \int \rho R^{2} dV$</td>
+</tr>
+<tr>
+<td align="left">^^     C. Banana</td>
+<td align="left"></td>
+<td align="left"><strong>It’s OK!</strong></td>
+</tr>
+</tbody></table>
+<h2 id="10"><a href="#10" class="headerlink" title="10"></a>10</h2><ul>
+<li>[o] rendered on VS code preview or not</li>
+<li><input disabled="" type="checkbox"> renderd on built site or not</li>
+</ul>
+<p>$I &#x3D; \int \rho R^{2} dV$<br>$ 3 * 3 $</p>
+<p><a target="_blank" rel="noopener" href="http://www.google.com">여기를 클릭</a></p>
+<h2 id="11"><a href="#11" class="headerlink" title="11"></a>11</h2><ul>
+<li><input checked="" disabled="" type="checkbox"> rendered on VS code preview or not</li>
+<li><input disabled="" type="checkbox"> renderd on built site or not</li>
+</ul>
+<div class="mermaid">
+gantt
+    dateFormat  YYYY-MM-DD
+    title       Adding GANTT diagram functionality to mermaid
+    excludes    weekends
+    %% (`excludes` accepts specific dates in YYYY-MM-DD format, days of the week ("sunday") or "weekends", but not the word "weekdays".)
+
+<pre><code>section A section
+Completed task            :done,    des1, 2014-01-06,2014-01-08
+Active task               :active,  des2, 2014-01-09, 3d
+Future task               :         des3, after des2, 5d
+Future task2              :         des4, after des3, 5d
+
+section Critical tasks
+Completed task in the critical line :crit, done, 2014-01-06,24h
+Implement parser and jison          :crit, done, after des1, 2d
+Create tests for parser             :crit, active, 3d
+Future task in critical line        :crit, 5d
+Create tests for renderer           :2d
+Add to mermaid                      :1d
+Functionality added                 :milestone, 2014-01-25, 0d
+
+section Documentation
+Describe gantt syntax               :active, a1, after des1, 3d
+Add gantt diagram to demo page      :after a1  , 20h
+Add another diagram to demo page    :doc1, after a1  , 48h
+
+section Last section
+Describe gantt syntax               :after doc1, 3d
+Add gantt diagram to demo page      :20h
+Add another diagram to demo page    :48h
+</code></pre>
+</div>
+
+<h2 id="12"><a href="#12" class="headerlink" title="12"></a>12</h2><ul>
+<li><input checked="" disabled="" type="checkbox"> rendered on VS code preview or not</li>
+<li><input disabled="" type="checkbox"> renderd on built site or not</li>
+</ul>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<blockquote class="twitter-tweet" data-lang="en">
+  <p lang="en" dir="ltr">
+    The next version of Hydejack (v6.3.0) will allow embedding 3rd party scripts,
+    like the one that comes with this tweet for example.
+  </p>
+  &mdash; Florian Klampfer (@qwtel)
+  <a target="_blank" rel="noopener" href="https://twitter.com/qwtel/status/871098943505039362">June 3, 2017</a>
+</blockquote>
+
+  
+
+
+<h2 id="13"><a href="#13" class="headerlink" title="13"></a>13</h2><ul>
+<li><input checked="" disabled="" type="checkbox"> rendered on VS code preview or not</li>
+<li><input disabled="" type="checkbox"> renderd on built site or not</li>
+</ul>
+<div class="mermaid">
+graph TD;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;
+click D href "https://google.com"
+</div>
+
+
+<h2 id="14"><a href="#14" class="headerlink" title="14"></a>14</h2><ul>
+<li>[o] rendered on VS code preview or not</li>
+<li><input disabled="" type="checkbox"> renderd on built site or not</li>
+</ul>
+<p>$$<br>a * b &#x3D; c ^ b   \<br>2^{\frac{n-1}{3}}  \<br>\int_a^b f(x),dx.  \<br>$$</p>
+<hr>
+<p>$$<br>\begin{aligned} %!!15<br>  \phi(x,y) &amp;&#x3D; \phi \left(\sum_{i&#x3D;1}^n x_ie_i, \sum_{j&#x3D;1}^n y_je_j \right) \[2em]<br>            &amp;&#x3D; \sum_{i&#x3D;1}^n \sum_{j&#x3D;1}^n x_i y_j \phi(e_i, e_j)            \[2em]<br>            &amp;&#x3D; (x_1, \ldots, x_n)<br>               \left(\begin{array}{ccc}<br>                 \phi(e_1, e_1)  &amp; \cdots &amp; \phi(e_1, e_n) \<br>                 \vdots          &amp; \ddots &amp; \vdots         \<br>                 \phi(e_n, e_1)  &amp; \cdots &amp; \phi(e_n, e_n)<br>               \end{array}\right)<br>               \left(\begin{array}{c}<br>                 y_1    \<br>                 \vdots \<br>                 y_n<br>               \end{array}\right) \<br>\end{aligned}<br>$$</p>
+<h2 id="15"><a href="#15" class="headerlink" title="15"></a>15</h2><ul>
+<li><p>maermaidjs live editor.</p>
+</li>
+<li><p>[o] rendered on VS code preview or not</p>
+</li>
+<li><p><input disabled="" type="checkbox"> 
+renderd on built site or not</p>
+</li>
+</ul>
+<p><a target="_blank" rel="noopener" href="https://mermaid-js.github.io/mermaid-live-editor/edit#pako:eNplj7EOwjAMRH_F8twFIZasFDF1Yu1iNRY10BiljqoK8e-klEoFMiXvznfOAxv1jA4BLppi4LEOkI-J3RiqEQaNVwln8PRRem5MNMBRwfQtzxygoiuDMTnYOah4wdmY7r2RxN7Bdq2U87yDzUQL2JP9dbTarZO8DmHJ-mo5ib3FnwossOPYkfj8x8dEa7SWcya6fPWU18c6PLMv3T0ZH7yYRnQWExdIyfQ0hmZ5z55S6Bypm-HzBR-_ZCw"><img src="https://mermaid.ink/img/pako:eNplj7EOwjAMRH_F8twFIZasFDF1Yu1iNRY10BiljqoK8e-klEoFMiXvznfOAxv1jA4BLppi4LEOkI-J3RiqEQaNVwln8PRRem5MNMBRwfQtzxygoiuDMTnYOah4wdmY7r2RxN7Bdq2U87yDzUQL2JP9dbTarZO8DmHJ-mo5ib3FnwossOPYkfj8x8dEa7SWcya6fPWU18c6PLMv3T0ZH7yYRnQWExdIyfQ0hmZ5z55S6Bypm-HzBR-_ZCw"></a></p>
+<h2 id="16"><a href="#16" class="headerlink" title="16"></a>16</h2><p><svg viewBox="0 0 1904 450" aria-labelledby="chart-title-mermaid-svg chart-desc-mermaid-svg" role="img" style="max-width: 1904px;" height="450" xmlns="http://www.w3.org/2000/svg" width="100%" id="mermaid-svg"><title id="chart-title-mermaid-svg">Pets adopted by volunteers</title><desc id="chart-desc-mermaid-svg"></desc><style>#mermaid-svg {font-family:”trebuchet ms”,verdana,arial,sans-serif;font-size:16px;fill:#333;}#mermaid-svg .error-icon{fill:#552222;}#mermaid-svg .error-text{fill:#552222;stroke:#552222;}#mermaid-svg .edge-thickness-normal{stroke-width:2px;}#mermaid-svg .edge-thickness-thick{stroke-width:3.5px;}#mermaid-svg .edge-pattern-solid{stroke-dasharray:0;}#mermaid-svg .edge-pattern-dashed{stroke-dasharray:3;}#mermaid-svg .edge-pattern-dotted{stroke-dasharray:2;}#mermaid-svg .marker{fill:#333333;stroke:#333333;}#mermaid-svg .marker.cross{stroke:#333333;}#mermaid-svg svg{font-family:”trebuchet ms”,verdana,arial,sans-serif;font-size:16px;}#mermaid-svg .pieCircle{stroke:black;stroke-width:2px;opacity:0.7;}#mermaid-svg .pieTitleText{text-anchor:middle;font-size:25px;fill:black;font-family:”trebuchet ms”,verdana,arial,sans-serif;}#mermaid-svg .slice{font-family:”trebuchet ms”,verdana,arial,sans-serif;fill:#333;font-size:17px;}#mermaid-svg .legend text{fill:black;font-family:”trebuchet ms”,verdana,arial,sans-serif;font-size:17px;}#mermaid-svg :root{–mermaid-font-family:”trebuchet ms”,verdana,arial,sans-serif;}</style><g></g><g transform="translate(952,225)"><path class="pieCircle" fill="#ECECFF" d="M1.1327982892113017e-14,-185A185,185,0,1,1,-177.89919060802214,-50.76295874957067L0,0Z"></path><path class="pieCircle" fill="#ffffde" d="M-177.89919060802214,-50.76295874957067A185,185,0,0,1,-35.651768201396706,-181.53223246606615L0,0Z"></path><path class="pieCircle" fill="hsl(80, 100%, 56.2745098039%)" d="M-35.651768201396706,-181.53223246606615A185,185,0,0,1,-1.982969563208622e-13,-185L0,0Z"></path><text style="text-anchor: middle;" class="slice" transform="translate(55.715631369627125,73.83778450823009)">79%</text><text style="text-anchor: middle;" class="slice" transform="translate(-62.60222388060678,-68.09707457154371)">17%</text><text style="text-anchor: middle;" class="slice" transform="translate(-8.955005540044146,-92.06550861086782)">3%</text><text class="pieTitleText" y="-200" x="0">Pets adopted by volunteers</text><g transform="translate(216,-33)" class="legend"><rect style="fill: rgb(236, 236, 255); stroke: rgb(236, 236, 255);" height="18" width="18"></rect><text y="14" x="22">Dogs</text></g><g transform="translate(216,-11)" class="legend"><rect style="fill: rgb(255, 255, 222); stroke: rgb(255, 255, 222);" height="18" width="18"></rect><text y="14" x="22">Cats</text></g><g transform="translate(216,11)" class="legend"><rect style="fill: rgb(181, 255, 32); stroke: rgb(181, 255, 32);" height="18" width="18"></rect><text y="14" x="22">Rats</text></g></g><style>@import url(“<a target="_blank" rel="noopener" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css&quot;">https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css&quot;</a>);</style></svg>)</p>
+<h2 id="17"><a href="#17" class="headerlink" title="17"></a>17</h2><div class="mermaid">
+graph TD;
+    A[Loading URL failed. We can try to figure out why.] -->|Decode JSON| B(Please check the console to see the JSON and error details.)
+    B --> C{Is the JSON correct?}
+    C -->|Yes| D(Please Click here to Raise an issue in github.<br/>Including the broken link in the issue <br/> will speed up the fix.)
+    C -->|No| E{Did someone <br/>send you this link?}
+    E -->|Yes| F[Ask them to send <br/>you the complete link]
+    E -->|No| G{Did you copy <br/> the complete URL?}
+    G --> |Yes| D
+    G --> |"No :("| H(Try using the Timeline tab in History <br/>from same browser you used to create the diagram.)
+    click D href "https://github.com/mermaid-js/mermaid-live-editor/issues/new?assignees=&labels=bug&template=bug_report.md&title=Broken%20link" "Raise issue"
+</div>
+
+<h2 id="18"><a href="#18" class="headerlink" title="18"></a>18</h2><p>@startuml<br>object Object01<br>object Object02<br>object Object03<br>object Object04<br>object Object05<br>object Object06<br>object Object07<br>object Object08</p>
+<p>Object01 &lt;|– Object02<br>Object03 *– Object04<br>Object05 o– “4” Object06<br>Object07 .. Object08 : some labels<br>@enduml</p>
+<h2 id="19"><a href="#19" class="headerlink" title="19"></a>19</h2><p>@startmermaid<br>gantt;<br>[Prototype design] lasts 15 days<br>[Test prototype] lasts 10 days<br>– All example –<br>[Task 1 (1 day)] lasts 1 day<br>[T2 (5 days)] lasts 5 days<br>[T3 (1 week)] lasts 1 week<br>[T4 (1 week and 4 days)] lasts 1 week and 4 days<br>[T5 (2 weeks)] lasts 2 weeks<br>@endmermaid</p>
+<h2 id="20"><a href="#20" class="headerlink" title="20"></a>20</h2><p><a href="./mermaid1.svg">Alt text</a></p>
+<h2 id="21"><a href="#21" class="headerlink" title="21"></a>21</h2><img src="./mermaid1.svg">
+
+<h2 id="22"><a href="#22" class="headerlink" title="22"></a>22</h2><p><a href="./mermaid2.svg">Alt text</a></p>
+
+        
+  </div>
+</article>
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a target="_blank" rel="noopener" href="http://github.com/probberechts">Projects</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#0"><span class="toc-number">1.</span> <span class="toc-text">0</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1"><span class="toc-number">2.</span> <span class="toc-text">1</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2"><span class="toc-number">3.</span> <span class="toc-text">2</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3"><span class="toc-number">4.</span> <span class="toc-text">3</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4"><span class="toc-number">5.</span> <span class="toc-text">4</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5"><span class="toc-number">6.</span> <span class="toc-text">5</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6"><span class="toc-number">7.</span> <span class="toc-text">6</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-IAL"><span class="toc-number">8.</span> <span class="toc-text">7 IAL</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8"><span class="toc-number">9.</span> <span class="toc-text">8</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9"><span class="toc-number">10.</span> <span class="toc-text">9</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#10"><span class="toc-number">11.</span> <span class="toc-text">10</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#11"><span class="toc-number">12.</span> <span class="toc-text">11</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#12"><span class="toc-number">13.</span> <span class="toc-text">12</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#13"><span class="toc-number">14.</span> <span class="toc-text">13</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#14"><span class="toc-number">15.</span> <span class="toc-text">14</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#15"><span class="toc-number">16.</span> <span class="toc-text">15</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#16"><span class="toc-number">17.</span> <span class="toc-text">16</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#17"><span class="toc-number">18.</span> <span class="toc-text">17</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#18"><span class="toc-number">19.</span> <span class="toc-text">18</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#19"><span class="toc-number">20.</span> <span class="toc-text">19</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#20"><span class="toc-number">21.</span> <span class="toc-text">20</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#21"><span class="toc-number">22.</span> <span class="toc-text">21</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#22"><span class="toc-number">23.</span> <span class="toc-text">22</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=http://example.com/2022/08/19/workings/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=http://example.com/2022/08/19/workings/&text=mermaid and math workings test..."><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=http://example.com/2022/08/19/workings/&title=mermaid and math workings test..."><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=http://example.com/2022/08/19/workings/&is_video=false&description=mermaid and math workings test..."><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=mermaid and math workings test...&body=Check out this article: http://example.com/2022/08/19/workings/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=http://example.com/2022/08/19/workings/&title=mermaid and math workings test..."><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=http://example.com/2022/08/19/workings/&title=mermaid and math workings test..."><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=http://example.com/2022/08/19/workings/&title=mermaid and math workings test..."><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=http://example.com/2022/08/19/workings/&title=mermaid and math workings test..."><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=http://example.com/2022/08/19/workings/&name=mermaid and math workings test...&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=http://example.com/2022/08/19/workings/&t=mermaid and math workings test..."><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy;
+    
+    
+    2016-2022
+    John Doe
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+        <!--
+       --><li><a href="/">Home</a></li><!--
+     --><!--
+       --><li><a href="/about/">About</a></li><!--
+     --><!--
+       --><li><a href="/archives/">Writing</a></li><!--
+     --><!--
+       --><li><a target="_blank" rel="noopener" href="http://github.com/probberechts">Projects</a></li><!--
+     -->
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+
+
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'"/>
+
+
+    <!-- jquery -->
+ 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script> 
+
+
+
+
+<!-- clipboard -->
+
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.7/clipboard.min.js" crossorigin="anonymous"></script> 
+  
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"Copy to clipboard!\">";
+    btn += '<i class="far fa-clone"></i>';
+    btn += '</span>'; 
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "Copied!");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Cloudflare Analytics -->
+
+<!-- Umami Analytics -->
+
+<!-- Disqus Comments -->
+
+<!-- utterances Comments -->
+
+</body>
+</html>
